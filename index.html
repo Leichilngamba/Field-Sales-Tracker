@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sales Field Tracker</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <h2>Sales Visit Form (with GPS Tracking)</h2>
+
+  <form id="salesForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdyCwK8R7OBsRc2TJ6nHR9y4XBecyaYF_0NhAce7aT0odnT2Q/formResponse" method="POST">
+    
+    <label>Sales Executive Name:</label>
+    <input type="text" name="entry.1234567890" required><br><br>
+
+    <label>Date of Visit:</label>
+    <input type="date" name="entry.1234567891" required><br><br>
+
+    <label>Time of Visit:</label>
+    <input type="time" name="entry.1234567892" required><br><br>
+
+    <label>Client/Outlet Name:</label>
+    <input type="text" name="entry.1234567893" required><br><br>
+
+    <label>Client/Outlet Address:</label>
+    <textarea name="entry.1234567894" required></textarea><br><br>
+
+    <label>Client/Outlet Mobile Number:</label>
+    <input type="tel" name="entry.1234567895" required pattern="[0-9]{10}"><br><br>
+
+    <label>Location Name:</label>
+    <input type="text" name="entry.1234567896"><br><br>
+
+    <label>Purpose of Visit:</label>
+    <select name="entry.1234567897" required>
+      <option value="">Select</option>
+      <option value="Follow-Up">Follow-Up</option>
+      <option value="Sales Call">Sales Call</option>
+      <option value="Product Demo">Product Demo</option>
+      <option value="Loan Tie-up">Loan Tie-up</option>
+    </select><br><br>
+
+    <label>Distance from Previous Location to Current Location (km):</label>
+    <input type="number" name="entry.1234567898" step="0.01"><br><br>
+
+    <label>Remarks from Client/Outlet:</label>
+    <textarea name="entry.1234567899"></textarea><br><br>
+
+    <!-- Hidden GPS fields -->
+    <input type="hidden" id="latitude" name="entry.1390238605">
+    <input type="hidden" id="longitude" name="entry.1341363039">
+
+    <button type="submit">Submit Form</button>
+  </form>
+
+  <script src="gps.js"></script>
+</body>
+</html>
